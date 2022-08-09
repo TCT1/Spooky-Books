@@ -9,7 +9,44 @@ html{
 
 body{
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.imgHeader{
+    height: 3rem;
+}
+
+h1{
+    justify-self: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+}
+
 
 .Catalogo{
     display: flex;
@@ -102,18 +139,6 @@ body{
     color: black;
 }
 
-h1{
-    justify-content: center;
-    text-align: center;
-    font-size: 70px;
-    padding: 10px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-wrap: wrap;
-}
-
 li{
     display: flex;
     color: white;
@@ -147,9 +172,8 @@ body{
 }
 
 .footer__redes{
-    display:flex;
-    margin-top: 215px;
-    height: 75px;
+    display: flex;
+    height: 60px;
     background: white;
     justify-content: center;
     align-items: center;
