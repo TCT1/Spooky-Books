@@ -1,5 +1,3 @@
-const catalogo = []
-
 const listaIt = document.getElementById("Lista__It");
 const listaResplandor = document.getElementById("Lista__Resplandor");
 const listaGatoNegro = document.getElementById("Lista__GatoNegro");
@@ -18,7 +16,7 @@ btnIt.addEventListener("click", It);
 btnResplandor.addEventListener("click", Resplandor);
 btnGatoNegro.addEventListener("click", GatoNegro);
 btnDamaDeNegro.addEventListener("click", DamaDeNegro);
-btnMisery.addEventListener("click", Misery);
+
 btnBorrarCarrito.addEventListener("click", borrarCarritoFunc);
 
 let totalPagar = 0;
@@ -42,39 +40,45 @@ const carrito = document.getElementById("totalPago");
 total.textContent = `Carrito vacio`;
 
 function borrarCarritoFunc(){
-    const borrarCarrito = confirm("¿Estás seguro que quieres eliminar todo tu carrito?");
-    if(borrarCarrito){
-        totalPagar = 0;
-        unidadesIt = 0;
-        unidadesResplandor = 0;
-        unidadesGatoNegro = 0;
-        unidadesDamaDeNegro = 0;
-        unidadesMisery = 0;
-        liIt.textContent = ``;
-        listaIt.replaceChild(liIt, listaIt.childNodes[0])
-
-        liResplandor.textContent = ``;
-        listaResplandor.replaceChild(liResplandor, listaResplandor.childNodes[0])
-
-        liGatoNegro.textContent = ``;
-        listaGatoNegro.replaceChild(liGatoNegro, listaGatoNegro.childNodes[0])
-
-        liDamaDeNegro.textContent = ``;
-        listaDamaDeNegro.replaceChild(liDamaDeNegro, listaDamaDeNegro.childNodes[0])
-
-        liMisery.textContent = ``;
-        listaMisery.replaceChild(liMisery, listaMisery.childNodes[0])
-
-        total.textContent = `Carrito vacio`;
-        borrarCarrito = false
+    if(totalPagar > 1){
+        const borrarCarrito = confirm("¿Estás seguro que quieres eliminar todo tu carrito?");
+        if(borrarCarrito){
+            totalPagar = 0;
+            unidadesIt = 0;
+            unidadesResplandor = 0;
+            unidadesGatoNegro = 0;
+            unidadesDamaDeNegro = 0;
+            unidadesMisery = 0;
+            liIt.textContent = ``;
+            listaIt.replaceChild(liIt, listaIt.childNodes[0])
+    
+            liResplandor.textContent = ``;
+            listaResplandor.replaceChild(liResplandor, listaResplandor.childNodes[0])
+    
+            liGatoNegro.textContent = ``;
+            listaGatoNegro.replaceChild(liGatoNegro, listaGatoNegro.childNodes[0])
+    
+            liDamaDeNegro.textContent = ``;
+            listaDamaDeNegro.replaceChild(liDamaDeNegro, listaDamaDeNegro.childNodes[0])
+    
+            liMisery.textContent = ``;
+            listaMisery.replaceChild(liMisery, listaMisery.childNodes[0])
+    
+            total.textContent = `Carrito vacio`;
+            borrarCarrito = false
+        }
+    }
+    else{
+        alert("No es posible realizar esta acción ahora");
     }
 }
 
 document.addEventListener("keydown", (e) => {
-    if(e.key == 'Enter' && totalPagar > 1){
+    if(e.key == 'Enter'){
         borrarCarritoFunc();
     }
 });
+
 
 function It(){
     totalPagar+=99;
