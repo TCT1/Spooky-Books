@@ -16,6 +16,7 @@ btnIt.addEventListener("click", It);
 btnResplandor.addEventListener("click", Resplandor);
 btnGatoNegro.addEventListener("click", GatoNegro);
 btnDamaDeNegro.addEventListener("click", DamaDeNegro);
+btnMisery.addEventListener("click", Misery);
 
 btnBorrarCarrito.addEventListener("click", borrarCarritoFunc);
 
@@ -65,7 +66,6 @@ function borrarCarritoFunc(){
             listaMisery.replaceChild(liMisery, listaMisery.childNodes[0])
     
             total.textContent = `Carrito vacio`;
-            borrarCarrito = false
         }
     }
     else{
@@ -140,7 +140,7 @@ function Misery(){
     totalPagar+=389;
     total.textContent = `El total a pagar por su compra es: $${totalPagar}`;
     carrito.replaceChild(total, carrito.childNodes[0])
-    unidadesMisery+=1;
+    unidadesMisery += 1;
     liMisery.textContent = `Misery x ${unidadesMisery} | Precio unitario: $389 | Subtotal: $${unidadesMisery * 389}`;
     if(unidadesMisery < 1){
         listaMisery.appendChild(liMisery)
