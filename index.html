@@ -11,76 +11,55 @@
 </head>
 <body>
     <header>
-        <img src="recursos/SBfavicon.png" class="imgHeader">
-        <h1>Spooky Books</h1>
+        <nav>
+            <div class="SB">
+                <img src="recursos/SBfavicon.png" class="imgHeader">
+                <h1>SpookyBooks</h1>
+            </div>
+            <ul class="menu">
+                <li class="menu__boton"><a href="index.html">Catálogo</a></li>
+                <li class="menu__boton"><a href="pages/carrito.html">Carrito</a></li>
+            </ul>
+        </div>
+        </nav>
     </header>
 
     <h2>Catálogo</h2>
 
-    <div class="Catalogo" id="Catalogo">
+    <div id="Catalogo">
         <div class="Producto">
             <img class="Producto__imagen" src="recursos/It.jpg">
             <span class="Producto__descripcion">It</span>
             <span class="Producto__precio">$99</span>
-            <input class="btn" id="Producto__boton__It" type="button" value="Agregar al carrito">
+            <a class="btn cart1">Agregar al carrito</a>
         </div>
 
         <div class="Producto">
             <img class="Producto__imagen" src="recursos/ElResplandor.jpg">
             <span class="Producto__descripcion">El Resplandor</span>
             <span class="Producto__precio">$499</span>
-            <input class="btn" id="Producto__boton__Resplandor" type="button" value="Agregar al carrito">
+            <a class="btn cart2">Agregar al carrito</a>
         </div>
 
         <div class="Producto">
             <img class="Producto__imagen" src="recursos/GatoNegro.jpg">
             <span class="Producto__descripcion">El Gato Negro</span>
             <span class="Producto__precio">$25</span>
-            <input class="btn" id="Producto__boton__GatoNegro" type="button" value="Agregar al carrito">
+            <a class="btn cart3">Agregar al carrito</a>
         </div>
 
         <div class="Producto">
             <img class="Producto__imagen" src="recursos/DamaDeNegro.jpg">
             <span class="Producto__descripcion">La Dama de Negro</span>
             <span class="Producto__precio">$169</span>
-            <input class="btn" id="Producto__boton__DamaDeNegro" type="button" value="Agregar al carrito">
+            <a class="btn cart4">Agregar al carrito</a>
         </div>
 
         <div class="Producto">
             <img class="Producto__imagen" src="recursos/Misery.jpg">
             <span class="Producto__descripcion">Misery</span>
             <span class="Producto__precio">$389</span>
-            <input class="btn" id="Producto__boton__Misery" type="button" value="Agregar al carrito">
-        </div>
-    </div>
-
-    <div id="Carrito">
-        <ul id="Lista__It">
-
-        </ul>
-
-        <ul id="Lista__Resplandor">
-            
-        </ul>
-
-        <ul id="Lista__GatoNegro">
-            
-        </ul>
-
-        <ul id="Lista__DamaDeNegro">
-            
-        </ul>
-
-        <ul id="Lista__Misery">
-            
-        </ul>
-
-        <div id="totalPago">
-
-        </div>
-
-        <div class="reciclaje">
-            <input id="borrarCarrito" type="button" value="Borrar el carrito">
+            <a class="btn cart5">Agregar al carrito</a>
         </div>
     </div>
 
@@ -93,6 +72,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -14,22 +14,60 @@ body{
 }
 
 header{
+    height: 50px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     background-color: white;
     margin-bottom: 40px;
     padding: 10px;
 }
 
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+
+.SB{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu__boton{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+nav li{
+    list-style: none;
+}
+
+li a{
+    border-radius: 20px;
+    background-color: #adadad;
+    font-weight: 800;
+    padding: 8px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .imgHeader{
+    justify-self: center;
     height: 3rem;
 }
 
 h1{
-    justify-self: center;
     text-align: center;
     font-size: 40px;
     font-weight: 900;
@@ -48,7 +86,7 @@ h2{
 }
 
 
-.Catalogo{
+#Catalogo{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -96,6 +134,7 @@ h2{
 
 .btn{
     background-color: white;
+    text-align: center;
     color: black;
     font-weight: 600;
     font-size: 12px;
@@ -103,7 +142,8 @@ h2{
     width: 90%;
 }
 
-.btn:hover{ 
+.btn:hover{
+    cursor: pointer;
     background-color: rgb(246, 255, 0);
     color: black;
 }
@@ -212,6 +252,68 @@ body{
     background: #c4302b;
     transform: scale(1.2);
 }
+
+
+
+
+
+
+.contenedorProductos{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.contenedorProductos ion-icon{
+    font-size: 25px;
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.headerProductos{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid white;
+    margin: 0 auto;
+}
+
+.tituloProducto,
+.precioProducto,
+.cantidadProducto,
+.totalProducto{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.contenedorProductoEnCarrito{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    height: 250px;
+    width: 600px;
+    margin: 15px;
+    justify-content: center;
+}
+
+.producto,
+.precio,
+.cantidad,
+.subtotalProductoCarrito{
+    display: flex;
+    align-items: center;
+}
+
+.imgProductoCarrito{
+    height: 80%;
+    width: auto;
+}
+
 
 @media (max-width: 1481px){
     #borrarCarrito{
@@ -333,4 +435,57 @@ body{
     p{
         font-size: 14px;
     }
+}
+
+@media (max-width: 499px) {
+    header{
+        height: 90px;
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .SB{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    nav li{
+        padding-top: 10px;
+        list-style: none;
+    }
+    
+    li a{
+        background-color: #adadad;
+        font-weight: 800;
+        padding: 8px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .imgHeader{
+        justify-self: center;
+        height: 2rem;
+    }
+    
+    h1{
+        font-size: 30px;
+    }
+    
 }
