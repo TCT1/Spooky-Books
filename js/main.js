@@ -1,36 +1,3 @@
-/* function borrarCarritoFunc(){
-    if(totalPagar > 1){
-        const borrarCarrito = confirm("¿Estás seguro que quieres eliminar todo tu carrito?");
-        if(borrarCarrito){
-            totalPagar = 0;
-            unidadesIt = 0;
-            unidadesResplandor = 0;
-            unidadesGatoNegro = 0;
-            unidadesDamaDeNegro = 0;
-            unidadesMisery = 0;
-            liIt.textContent = ``;
-            listaIt.replaceChild(liIt, listaIt.childNodes[0])
-    
-            liResplandor.textContent = ``;
-            listaResplandor.replaceChild(liResplandor, listaResplandor.childNodes[0])
-    
-            liGatoNegro.textContent = ``;
-            listaGatoNegro.replaceChild(liGatoNegro, listaGatoNegro.childNodes[0])
-    
-            liDamaDeNegro.textContent = ``;
-            listaDamaDeNegro.replaceChild(liDamaDeNegro, listaDamaDeNegro.childNodes[0])
-    
-            liMisery.textContent = ``;
-            listaMisery.replaceChild(liMisery, listaMisery.childNodes[0])
-    
-            total.textContent = `Carrito vacio`;
-        }
-    }
-    else{
-        alert("No es posible realizar esta acción ahora");
-    }
-} */
-
 let boton = document.querySelectorAll(".btn");
 let carrito = []
 let libros = [
@@ -77,6 +44,8 @@ for(let i=0; i< boton.length; i++){
         totalPagar(libros[i]);
     })
 }
+
+
 
 function productos(libro){
     let numProductos = localStorage.getItem("numProductos");
@@ -141,16 +110,16 @@ function mostrarCarrito(){
             contenedorProductos.innerHTML += `
             <div class="contenedorProductoEnCarrito">
                 <div class="producto">
-                    <ion-icon name="trash" class="eliminarProducto"></ion-icon>
                     <img class="imgProductoCarrito" src="../recursos/${item.tag}.jpg">
                     <span class="nombreProductoCarrito">${item.nombre}</span>
-                </div>
-                <div class="precio">$${item.precio}</div>
-                <div class="cantidad">
-                    <span class="cantidadProductoCarrito">${item.enCarrito}</span>
-                </div>
-                <div class="subtotalProductoCarrito">
-                    $${item.enCarrito * item.precio}
+                    <ion-icon name="trash" class="eliminarProducto"></ion-icon>
+                    <div class="precio">$${item.precio}</div>
+                    <div class="cantidad">
+                        <span class="cantidadProductoCarrito">${item.enCarrito}</span>
+                    </div>
+                    <div class="subtotalProductoCarrito">
+                        $${item.enCarrito * item.precio}
+                    </div>
                 </div>
             </div>
             `
