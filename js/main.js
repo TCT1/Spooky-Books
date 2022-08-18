@@ -1,5 +1,4 @@
 let boton = document.querySelectorAll(".btn");
-let carrito = []
 let libros = [
     {
         nombre: "It",
@@ -35,6 +34,41 @@ let libros = [
         precio: 389,
         id: 5,
         enCarrito: 0
+    },
+    {
+        nombre: "Después",
+        tag: "Despues",
+        precio: 407,
+        id: 6,
+        enCarrito: 0
+    },
+    {
+        nombre: "Chirstine",
+        tag: "Chirstine",
+        precio: 217,
+        id: 7,
+        enCarrito: 0
+    },
+    {
+        nombre: "Insomnia",
+        tag: "Insomnia",
+        precio: 236,
+        id: 8,
+        enCarrito: 0
+    },
+    {
+        nombre: "El Exorcista",
+        tag: "Exorcista",
+        precio: 290,
+        id: 9,
+        enCarrito: 0
+    },
+    {
+        nombre: "El Otro",
+        tag: "Otro",
+        precio: 455,
+        id: 10,
+        enCarrito: 0
     }
 ]
 
@@ -42,6 +76,12 @@ for(let i=0; i< boton.length; i++){
     boton[i].addEventListener("click", () => {
         productos(libros[i]);
         totalPagar(libros[i]);
+        Swal.fire({
+            title: "Producto añadido al carrito",
+            icon: "info",
+            showConfirmButton: false,
+            timer: 1500
+        })
     })
 }
 
