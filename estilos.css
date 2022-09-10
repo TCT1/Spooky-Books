@@ -256,78 +256,87 @@ body{
 
 
 
+.producto{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
+.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.contenedorProductos{
-    max-width: 650px;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 50px;
+.nombreProductoCarrito{
+    font-size: 18px;
+}
+
+.cantidadProductoCarrito{
+    font-size: 18px;
 }
 
 .contenedorProductos ion-icon{
-    font-size: 25px;
-    color: #000;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-.headerProductos{
-    width: 100%;
-    max-width: 650px;
+.funciones__producto__carrito{
     display: flex;
-    justify-content: flex-start;
-    border-bottom: 4px solid white;
-    margin: 0 auto;
-}
-
-.tituloProducto,
-.precioProducto,
-.cantidadProducto,
-.totalProducto{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .contenedorProductoEnCarrito{
     display: flex;
-    flex-direction: row;
-    background-color: red;
-    height: 250px;
-    width: 600px;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    height: 300px;
+    width: 200px;
     margin-top: 30px;
+    margin: 10px;
     justify-content: center;
 }
 
-.producto,
-.precio,
-.cantidad,
 .subtotalProductoCarrito{
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+.TextoSubtotal{
+    font-size: 20px;
 }
 
 .imgProductoCarrito{
-    height: 80%;
+    height: 60%;
     width: auto;
 }
 
 .totalContenedor{
+    color: #fff;
     background-color: rgb(0, 0, 0);
-    margin-top: 40px;
-    margin-bottom: 60px;
-}
-.totalCarritoTitulo,
-.totalCarrito{
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    padding: 3px;
+    border-radius: 6px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    padding: 6px;
 }
 
+/* Responsive */
 @media (max-width: 1481px){
     #borrarCarrito{
         width: 15%;

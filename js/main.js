@@ -1,4 +1,8 @@
+/* Botones de agregar al carrito */
 let boton = document.querySelectorAll(".btn");
+
+/* Propiedades de libros */
+let productos     = [];
 let libros = [
     {
         nombre: "It",
@@ -72,22 +76,22 @@ let libros = [
     }
 ]
 
+/* Detectamos el click en los botones de agregar al carrito */
 for(let i=0; i< boton.length; i++){
     boton[i].addEventListener("click", () => {
-        productos(libros[i]);
+        producto(libros[i]);
         totalPagar(libros[i]);
         Swal.fire({
             title: "Producto añadido al carrito",
             icon: "info",
             showConfirmButton: false,
-            timer: 1500
+            timer: 1200
         })
     })
 }
 
-
-
-function productos(libro){
+/* Se obtiene la cantidad de libro en el carrito y se guarda al local storage */
+function producto(libro){
     let numProductos = localStorage.getItem("numProductos");
     numProductos = parseInt(numProductos);
     if(numProductos){
@@ -99,6 +103,7 @@ function productos(libro){
     setearLibros(libro);
 }
 
+/* Se agregan los libros en el carrito en el local storage */
 function setearLibros(libro){
     let itemsDeCarrito = localStorage.getItem("librosEnCarrito");
     itemsDeCarrito = JSON.parse(itemsDeCarrito);
@@ -128,6 +133,7 @@ function setearLibros(libro){
     localStorage.setItem("librosEnCarrito", JSON.stringify(itemsDeCarrito));
 }
 
+/* Se calcula el precio final de todo el carrito */
 function totalPagar(libro){
     let precioTotal = localStorage.getItem("precioTotal");
     if(precioTotal != null){
@@ -138,6 +144,7 @@ function totalPagar(libro){
     }
 }
 
+/* Se renderizan los libros en la página de Carrito.html mediante inyección de código */
 function mostrarCarrito(){
     let contenedorProductos = document.querySelector(".productos")
     let itemsCarrito = localStorage.getItem("librosEnCarrito");
@@ -151,14 +158,16 @@ function mostrarCarrito(){
             <div class="contenedorProductoEnCarrito">
                 <div class="producto">
                     <img class="imgProductoCarrito" src="../recursos/${item.tag}.jpg">
-                    <span class="nombreProductoCarrito">${item.nombre}</span>
-                    <ion-icon name="trash" class="eliminarProducto"></ion-icon>
-                    <div class="precio">$${item.precio}</div>
                     <div class="cantidad">
+                        <span class="nombreProductoCarrito">${item.nombre}</span>
+                        <span>x</span>
                         <span class="cantidadProductoCarrito">${item.enCarrito}</span>
                     </div>
+                    <div class="funciones__producto__carrito">
+                        <ion-icon name="trash" class="eliminarProducto"></ion-icon>
+                    </div>
                     <div class="subtotalProductoCarrito">
-                        $${item.enCarrito * item.precio}
+                        <span class="TextoSubtotal">Subtotal: $${item.enCarrito * item.precio}</span>
                     </div>
                 </div>
             </div>
@@ -174,4 +183,9 @@ function mostrarCarrito(){
     }
 }
 
-mostrarCarrito();
+let gestor;
+document.addEventListener('DOMContentLoaded', () => {
+    gestor = new GestionarLibros();
+    gestor.iniciar();
+    mostrarCarrito();
+})

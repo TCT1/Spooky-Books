@@ -1,0 +1,62 @@
+[
+    {
+        "img": "recursos/It.jpg",
+        "descripcion": "It",
+        "precio": 99,
+        "id": 1
+    },
+    {
+        "img": "recursos/ElResplandor.jpg",
+        "descripcion": "El Resplandor",
+        "precio": 499,
+        "id": 2
+    },
+    {
+        "img": "recursos/GatoNegro.jpg",
+        "descripcion": "El Gato Negro",
+        "precio": 25,
+        "id": 3
+    },
+    {
+        "img": "recursos/DamaDeNegro.jpg",
+        "descripcion": "La Dama de Negro",
+        "precio": 169,
+        "id": 4
+    },
+    {
+        "img": "recursos/Misery.jpg",
+        "descripcion": "Misery",
+        "precio": 389,
+        "id": 5
+    },
+    {
+        "img": "recursos/Despues.jpg",
+        "descripcion": "Después",
+        "precio": 407,
+        "id": 6
+    },
+    {
+        "img": "recursos/Chirstine.jpg",
+        "descripcion": "Christine",
+        "precio": 217,
+        "id": 7
+    },
+    {
+        "img": "recursos/Insomnia.jpg",
+        "descripcion": "Insomnia",
+        "precio": 236,
+        "id": 8
+    },
+    {
+        "img": "recursos/Exorcista.jpg",
+        "descripcion": "El Exorcista",
+        "precio": 290,
+        "id": 9
+    },
+    {
+        "img": "recursos/Otro.jpg",
+        "descripcion": "El Otro",
+        "precio": 455,
+        "id": 10
+    }
+]
