@@ -1,5 +1,4 @@
 /* Botones de agregar al carrito */
-let prod = document.getElementsByTagName('a');
 let boton = document.querySelectorAll(".Producto");
 let libros = [
     {
@@ -112,7 +111,6 @@ let libros = [
 /* Detectamos el click en los botones de agregar al carrito */
 for(let i=0; i< boton.length; i++){
     boton[i].addEventListener("click", () => {
-        console.log("A")
         producto(libros[i]);
         totalPagar(libros[i]);
         Swal.fire({
