@@ -19,7 +19,7 @@
     },
     {
         "img": "recursos/DamaDeNegro.jpg",
-        "descripcion": "La Dama de Negro",
+        "descripcion": "Dama de Negro",
         "precio": 169,
         "id": 4
     },
@@ -58,5 +58,35 @@
         "descripcion": "El Otro",
         "precio": 455,
         "id": 10
+    },
+    {
+        "img": "recursos/instituto.jpg",
+        "descripcion": "El Instito",
+        "precio": 174,
+        "id": 11
+    },
+    {
+        "img": "recursos/ritual.jpg",
+        "descripcion": "El Ritual",
+        "precio": 159,
+        "id": 12
+    },
+    {
+        "img": "recursos/visitante.jpg",
+        "descripcion": "El Visitante",
+        "precio": 474,
+        "id": 13
+    },
+    {
+        "img": "recursos/terror.jpg",
+        "descripcion": "El Terror",
+        "precio": 648,
+        "id": 14
+    },
+    {
+        "img": "recursos/hellraiser.jpg",
+        "descripcion": "Hellraiser",
+        "precio": 436,
+        "id": 15
     }
 ]

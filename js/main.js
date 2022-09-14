@@ -1,8 +1,6 @@
 /* Botones de agregar al carrito */
-let boton = document.querySelectorAll(".btn");
-
-/* Propiedades de libros */
-let productos     = [];
+let prod = document.getElementsByTagName('a');
+let boton = document.querySelectorAll(".Producto");
 let libros = [
     {
         nombre: "It",
@@ -73,12 +71,48 @@ let libros = [
         precio: 455,
         id: 10,
         enCarrito: 0
+    },
+    {
+        nombre: "El Otro",
+        tag: "instituto",
+        precio: 174,
+        id: 11,
+        enCarrito: 0
+    },
+    {
+        nombre: "El Ritual",
+        tag: "ritual",
+        precio: 159,
+        id: 12,
+        enCarrito: 0
+    },
+    {
+        nombre: "El Visitante",
+        tag: "visitante",
+        precio: 474,
+        id: 13,
+        enCarrito: 0
+    },
+    {
+        nombre: "El Terror",
+        tag: "terror",
+        precio: 648,
+        id: 14,
+        enCarrito: 0
+    },
+    {
+        nombre: "Hellraiser",
+        tag: "hellraiser",
+        precio: 436,
+        id: 15,
+        enCarrito: 0
     }
 ]
 
 /* Detectamos el click en los botones de agregar al carrito */
 for(let i=0; i< boton.length; i++){
     boton[i].addEventListener("click", () => {
+        console.log("A")
         producto(libros[i]);
         totalPagar(libros[i]);
         Swal.fire({
@@ -184,8 +218,13 @@ function mostrarCarrito(){
 }
 
 let gestor;
-document.addEventListener('DOMContentLoaded', () => {
-    gestor = new GestionarLibros();
-    gestor.iniciar();
+let carritoObjeto = document.getElementById("pagCarrito")
+if(!carritoObjeto){
+    document.addEventListener('DOMContentLoaded', () => {
+        gestor = new GestionarLibros();
+        gestor.iniciar();
+    })
+}
+else{
     mostrarCarrito();
-})
+}

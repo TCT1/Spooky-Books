@@ -18,9 +18,9 @@ class GestionarLibros{
                 <img class="Producto__imagen" src="${producto.img}">
                 <span class="Producto__descripcion">${producto.descripcion}</span>
                 <span class="Producto__precio">$${producto.precio}</span>
-                <a class="btn cart1">Agregar al carrito</a>
+                <ion-icon id="btn" name="cart"></ion-icon>
             `;
-            contenedorLibrosCatalogo.appendChild( prod );
-        })    
+            contenedorLibrosCatalogo.appendChild(prod);
+        }) 
     }
 }
